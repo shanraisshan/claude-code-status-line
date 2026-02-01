@@ -1,5 +1,10 @@
 # Claude Code Status Line
 
+<p align="center">
+  <img src="!/claude-pointing.svg" alt="Claude Code mascot jumping and pointing" width="140" height="126">
+  <img src="!/claude-monitor.svg" alt="Claude Code status line monitor" width="224" height="182">
+</p>
+
 A minimal status line script for [Claude Code](https://claude.ai/) that displays model name and context window usage.
 
 ![Status Line Example](https://img.shields.io/badge/Claude%20Code-2.1.6+-blue)
