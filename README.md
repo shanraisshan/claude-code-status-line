@@ -9,37 +9,16 @@ A minimal status line script for [Claude Code](https://claude.ai/) that displays
 
 ![Status Line Example](https://img.shields.io/badge/Claude%20Code-2.1.6+-blue)
 
-![Screenshot](!/comparision.png)
+<p align="center">
+  <img src="!/comparision.jpg" alt="Status line comparison" width="812" height="346">
+</p>
 
 ## Preview
 
-**Session start (loading state):**
+**1M context window (shown as `1m`) with usage limits and reset times:**
 ```
-Opus 4.5 | ○○○○○○○○○○ loading...
+Opus 4.7 (high) | ○○○○○○○○○○ 70k/1m (7%) | 5h 3% (02:39 PM) · Wk 20% (May 21, 04:00 PM)
 ```
-
-**Normal usage (blue circles):**
-```
-Opus 4.5 | ●●●○○○○○○○ 30k/200k (15% used)
-```
-
-**Warning state (red circles when > 60%):**
-```
-Opus 4.5 | ●●●●●●●○○○ 140k/200k (70% used)
-```
-
-## Features
-
-- **Context Window Display**: Shows token usage with circle-based progress bar
-- **Loading State**: Empty circles with "loading..." at session start
-- **Warning Indicator**: Circles turn red when context usage exceeds 60%
-- **Minimal Design**: Shows only model name and context - no clutter
-
-## Requirements
-
-- Claude Code v2.1.6 or higher
-- `jq` (JSON processor)
-- Bash shell
 
 ## Installation
 
@@ -72,32 +51,33 @@ Opus 4.5 | ●●●●●●●○○○ 140k/200k (70% used)
 
 5. **Restart Claude Code** to see the new status line.
 
-## How It Works
+## Other Repos
 
-The script reads JSON data from Claude Code via stdin and displays:
-
-- **Model name**: From `model.display_name` or `model.id`
-- **Context usage**: Calculated from `context_window.used_percentage`
-- **Progress bar**: 10 circles showing usage visually
-
-
-## Status Line Input JSON
-
-Claude Code pipes JSON data to your status line script. Key fields used:
-
-```json
-{
-  "context_window": {
-    "context_window_size": 200000,
-    "used_percentage": 24
-  },
-  "model": {
-    "id": "claude-opus-4-5-20251101",
-    "display_name": "Opus 4.5"
-  }
-}
-```
-
-## Created By
-
-Claude Code
+<table>
+<tr>
+<td align="center" width="140">
+  <a href="https://github.com/shanraisshan/claude-code-best-practice"><img src="!/claude-jumping.svg" alt="Claude Code Best Practice" width="64" height="64"></a><br>
+  <a href="https://github.com/shanraisshan/claude-code-best-practice"><strong>Claude Code<br>Best Practice</strong></a>
+</td>
+<td align="center" width="140">
+  <a href="https://github.com/shanraisshan/claude-code-hooks"><img src="!/claude-speaking.svg" alt="Claude Code Hooks" width="64" height="64"></a><br>
+  <a href="https://github.com/shanraisshan/claude-code-hooks"><strong>Claude Code<br>Hooks</strong></a>
+</td>
+<td align="center" width="140">
+  <a href="https://github.com/shanraisshan/codex-cli-best-practice"><img src="!/codex-jumping.svg" alt="Codex CLI Best Practice" width="64" height="64"></a><br>
+  <a href="https://github.com/shanraisshan/codex-cli-best-practice"><strong>Codex CLI<br>Best Practice</strong></a>
+</td>
+<td align="center" width="140">
+  <a href="https://github.com/shanraisshan/codex-cli-hooks"><img src="!/codex-speaking.svg" alt="Codex CLI Hooks" width="64" height="64"></a><br>
+  <a href="https://github.com/shanraisshan/codex-cli-hooks"><strong>Codex CLI<br>Hooks</strong></a>
+</td>
+<td align="center" width="140">
+  <a href="https://github.com/shanraisshan/gemini-cli-best-practice"><img src="!/gemini-jumping.svg" alt="Gemini CLI Best Practice" width="64" height="64"></a><br>
+  <a href="https://github.com/shanraisshan/gemini-cli-best-practice"><strong>Gemini CLI<br>Best Practice</strong></a>
+</td>
+<td align="center" width="140">
+  <a href="https://github.com/shanraisshan/gemini-cli-hooks"><img src="!/gemini-speaking.svg" alt="Gemini CLI Hooks" width="64" height="64"></a><br>
+  <a href="https://github.com/shanraisshan/gemini-cli-hooks"><strong>Gemini CLI<br>Hooks</strong></a>
+</td>
+</tr>
+</table>
