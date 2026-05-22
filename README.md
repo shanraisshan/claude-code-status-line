@@ -5,20 +5,19 @@
   <img src="!/claude-monitor.svg" alt="Claude Code status line monitor" width="224" height="182">
 </p>
 
-A minimal status line script for [Claude Code](https://claude.ai/) that displays model name and context window usage.
+<p align="center">
+  <img src="!/status-line.png" alt="Status line">
+</p>
 
-![Status Line Example](https://img.shields.io/badge/Claude%20Code-2.1.6+-blue)
+```
+Model (effort) | ○○○○○○○○○○ 20k/1m Context Window (2% used) | 5hour-Limit 1% used (ends on 05:50 AM) · Weekly-Limit 2% used (ends on May 28, 04:00 PM)
+```
+
+### Comparision with usage
 
 <p align="center">
   <img src="!/comparision.jpg" alt="Status line comparison" width="812" height="346">
 </p>
-
-## Preview
-
-**1M context window (shown as `1m`) with usage limits and reset times:**
-```
-Opus 4.7 (high) | ○○○○○○○○○○ 70k/1m (7%) | 5h 3% (02:39 PM) · Wk 20% (May 21, 04:00 PM)
-```
 
 ## Installation
 
